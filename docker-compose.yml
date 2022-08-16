@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    build: ./docker/app
+    container_name: zemi_webapp_container
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app:/app
+    command: "npm dev"
+    stdin_open: true
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
