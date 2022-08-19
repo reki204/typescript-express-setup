@@ -3,9 +3,11 @@ ENV NODE_ENV production
 
 WORKDIR /usr/src/app
 
-COPY package.json $APP_ROOT
+COPY package*.json ./
 RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
+
+CMD [ "npm run dev" ]
