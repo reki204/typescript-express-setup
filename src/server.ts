@@ -10,6 +10,7 @@ export class AppServer {
     this.app = express();
     this.server = http.createServer(this.app);
     this.port = process.env.PORT || 8080;
+    this.setRoute();
   };
 
   public setRoute() {

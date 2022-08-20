@@ -10,6 +10,6 @@ describe('GET /', () => {
   it('correct message', async () => {
     const server = new AppServer();
     const res = await request(server.app).get('/');
-    expect(res.body.message).toBe({ message: 'AppServer started' });
+    expect(res.body.message).toBe('AppServer started');
   });
 });
