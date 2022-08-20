@@ -1,7 +1,24 @@
 import express from 'express';
-const app: express.Application = express();
-const port: string | number = process.env.PORT || 8080;
+import * as http from 'http';
 
-app.get('/', (req: express.Request, res: express.Response) => res.send('Hello World!'));
+export class AppServer {
+  public app: express.Application;
+  public server: http.Server;
+  public port: string | number;
 
-app.listen(port, () => console.log(`listening on ${port}`));
+  constructor() {
+    this.app = express();
+    this.server = http.createServer(this.app);
+    this.port = process.env.PORT || 8080;
+  };
+
+  public setRoute() {
+    this.app.get('/', (req: express.Request, res: express.Response) => {
+      res.json({ message: 'AppServer started' });
+    });
+  };
+  
+  public listen() {
+    this.app.listen(this.port, () => console.log(`listening on ${this.port}`));
+  };
+};
