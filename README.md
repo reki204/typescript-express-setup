@@ -26,10 +26,6 @@ docker-compose down
 
 # statusの確認
 docker-compose ps
-
-# JavaScriptの起動
-docker-compose run --rm web npm run dev
-
 ```
 
 
