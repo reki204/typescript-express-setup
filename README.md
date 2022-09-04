@@ -34,7 +34,7 @@ docker-compose run --rm web npm run dev
 
 
 ### Frontend
-特になし。HTML、CSSのみでなく、`VueやReactを使用する`ことをおすすめする。どんどん改良してください。
+特になし。HTML、CSSのみでなく、`VueやReactを使用する`ことをおすすめ。どんどん改良してください。
 
 
 ### Backend
