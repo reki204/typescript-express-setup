@@ -26,15 +26,11 @@ docker-compose down
 
 # statusの確認
 docker-compose ps
-
-# JavaScriptの起動
-docker-compose run --rm web npm run dev
-
 ```
 
 
 ### Frontend
-特になし。HTML、CSSのみでなく、`VueやReactを使用する`ことをおすすめする。どんどん改良してください。
+特になし。HTML、CSSのみでなく、`VueやReactを使用する`ことをおすすめ。どんどん改良してください。
 
 
 ### Backend
